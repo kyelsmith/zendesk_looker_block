@@ -1,10 +1,10 @@
-view: tickets_fields {
-  sql_table_name: zendesk.tickets_fields ;;
+view: custom_fields {
+  sql_table_name: zendesk.custom_fields ;;
 
-  dimension: field_id {
+  dimension: id {
+    primary_key: yes
     type: number
-    # hidden: yes
-    sql: ${TABLE}.field_id ;;
+    sql: ${TABLE}.id ;;
   }
 
   dimension: ticket_id {
@@ -20,6 +20,6 @@ view: tickets_fields {
 
   measure: count {
     type: count
-    drill_fields: [tickets.ticket_id, fields.field_id, fields.name]
+    drill_fields: [id, tickets.id]
   }
 }

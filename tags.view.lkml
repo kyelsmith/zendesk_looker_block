@@ -1,11 +1,5 @@
-view: fields {
-  sql_table_name: zendesk.fields ;;
-
-  dimension: id {
-    primary_key: yes
-    type: number
-    sql: ${TABLE}.id ;;
-  }
+view: tags {
+  sql_table_name: zendesk.tags ;;
 
   dimension: ticket_id {
     type: number
@@ -20,6 +14,6 @@ view: fields {
 
   measure: count {
     type: count
-    drill_fields: [id, tickets.id]
+    drill_fields: [tickets.id]
   }
 }
