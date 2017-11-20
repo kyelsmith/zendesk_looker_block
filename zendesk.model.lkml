@@ -32,4 +32,14 @@ explore: tickets {
     sql_on: ${tickets.id} = ${tags.ticket_id} ;;
     relationship: one_to_many
   }
+  join: users {
+    type: left_outer
+    sql_on: ${tickets.assignee_id} = ${users.id} ;;
+    relationship: one_to_many
+  }
+  join: organizations {
+    type: left_outer
+    sql_on: ${users.organization_id} = ${organizations.id} ;;
+    relationship: one_to_many
+  }
 }
