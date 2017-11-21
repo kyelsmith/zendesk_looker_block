@@ -85,17 +85,17 @@ view: tickets {
     sql: ${TABLE}.is_public ;;
   }
 
-  dimension: metric_setagent_wait_time_in_minutesbusiness {
+  dimension: z_setagent_wait_time_in_minutesbusiness {
     type: number
     sql: ${TABLE}.`metric_set-agent_wait_time_in_minutes-business` ;;
   }
 
-  dimension: metric_setagent_wait_time_in_minutescalendar {
+  dimension: z_setagent_wait_time_in_minutescalendar {
     type: number
     sql: ${TABLE}.`metric_set-agent_wait_time_in_minutes-calendar` ;;
   }
 
-  dimension_group: metric_setassigned {
+  dimension_group: z_setassigned {
     type: time
     timeframes: [
       raw,
@@ -109,12 +109,12 @@ view: tickets {
     sql: ${TABLE}.`metric_set-assigned_at` ;;
   }
 
-  dimension: metric_setassignee_stations {
+  dimension: z_setassignee_stations {
     type: number
     sql: ${TABLE}.`metric_set-assignee_stations` ;;
   }
 
-  dimension_group: metric_setassignee_updated {
+  dimension_group: z_setassignee_updated {
     type: time
     timeframes: [
       raw,
@@ -128,7 +128,7 @@ view: tickets {
     sql: ${TABLE}.`metric_set-assignee_updated_at` ;;
   }
 
-  dimension_group: metric_setcreated {
+  dimension_group: z_setcreated {
     type: time
     timeframes: [
       raw,
@@ -142,38 +142,38 @@ view: tickets {
     sql: ${TABLE}.`metric_set-created_at` ;;
   }
 
-  dimension: metric_setfirst_resolution_time_in_minutesbusiness {
+  dimension: z_setfirst_resolution_time_in_minutesbusiness {
     type: number
     sql: ${TABLE}.`metric_set-first_resolution_time_in_minutes-business` ;;
   }
 
-  dimension: metric_setfirst_resolution_time_in_minutescalendar {
+  dimension: z_setfirst_resolution_time_in_minutescalendar {
     type: number
     sql: ${TABLE}.`metric_set-first_resolution_time_in_minutes-calendar` ;;
   }
 
-  dimension: metric_setfull_resolution_time_in_minutesbusiness {
+  dimension: z_setfull_resolution_time_in_minutesbusiness {
     type: number
     sql: ${TABLE}.`metric_set-full_resolution_time_in_minutes-business` ;;
   }
 
-  dimension: metric_setfull_resolution_time_in_minutescalendar {
+  dimension: z_setfull_resolution_time_in_minutescalendar {
     type: number
     sql: ${TABLE}.`metric_set-full_resolution_time_in_minutes-calendar` ;;
   }
 
-  dimension: metric_setgroup_stations {
+  dimension: z_setgroup_stations {
     type: number
     sql: ${TABLE}.`metric_set-group_stations` ;;
   }
 
-  dimension: metric_setid {
+  dimension: z_setid {
     type: number
     value_format_name: id
     sql: ${TABLE}.`metric_set-id` ;;
   }
 
-  dimension_group: metric_setinitially_assigned {
+  dimension_group: z_setinitially_assigned {
     type: time
     timeframes: [
       raw,
@@ -187,7 +187,7 @@ view: tickets {
     sql: ${TABLE}.`metric_set-initially_assigned_at` ;;
   }
 
-  dimension_group: metric_setlatest_comment_added {
+  dimension_group: z_setlatest_comment_added {
     type: time
     timeframes: [
       raw,
@@ -201,37 +201,37 @@ view: tickets {
     sql: ${TABLE}.`metric_set-latest_comment_added_at` ;;
   }
 
-  dimension: metric_seton_hold_time_in_minutesbusiness {
+  dimension: z_seton_hold_time_in_minutesbusiness {
     type: number
     sql: ${TABLE}.`metric_set-on_hold_time_in_minutes-business` ;;
   }
 
-  dimension: metric_seton_hold_time_in_minutescalendar {
+  dimension: z_seton_hold_time_in_minutescalendar {
     type: number
     sql: ${TABLE}.`metric_set-on_hold_time_in_minutes-calendar` ;;
   }
 
-  dimension: metric_setreopens {
+  dimension: z_setreopens {
     type: number
     sql: ${TABLE}.`metric_set-reopens` ;;
   }
 
-  dimension: metric_setreplies {
+  dimension: z_setreplies {
     type: number
     sql: ${TABLE}.`metric_set-replies` ;;
   }
 
-  dimension: metric_setreply_time_in_minutesbusiness {
+  dimension: z_setreply_time_in_minutesbusiness {
     type: number
     sql: ${TABLE}.`metric_set-reply_time_in_minutes-business` ;;
   }
 
-  dimension: metric_setreply_time_in_minutescalendar {
+  dimension: z_setreply_time_in_minutescalendar {
     type: number
     sql: ${TABLE}.`metric_set-reply_time_in_minutes-calendar` ;;
   }
 
-  dimension_group: metric_setrequester_updated {
+  dimension_group: z_setrequester_updated {
     type: time
     timeframes: [
       raw,
@@ -245,17 +245,17 @@ view: tickets {
     sql: ${TABLE}.`metric_set-requester_updated_at` ;;
   }
 
-  dimension: metric_setrequester_wait_time_in_minutesbusiness {
+  dimension: z_setrequester_wait_time_in_minutesbusiness {
     type: number
     sql: ${TABLE}.`metric_set-requester_wait_time_in_minutes-business` ;;
   }
 
-  dimension: metric_setrequester_wait_time_in_minutescalendar {
+  dimension: z_setrequester_wait_time_in_minutescalendar {
     type: number
     sql: ${TABLE}.`metric_set-requester_wait_time_in_minutes-calendar` ;;
   }
 
-  dimension_group: metric_setsolved {
+  dimension_group: z_setsolved {
     type: time
     timeframes: [
       raw,
@@ -269,7 +269,7 @@ view: tickets {
     sql: ${TABLE}.`metric_set-solved_at` ;;
   }
 
-  dimension_group: metric_setstatus_updated {
+  dimension_group: z_setstatus_updated {
     type: time
     timeframes: [
       raw,
@@ -283,7 +283,7 @@ view: tickets {
     sql: ${TABLE}.`metric_set-status_updated_at` ;;
   }
 
-  dimension_group: metric_setupdated {
+  dimension_group: z_setupdated {
     type: time
     timeframes: [
       raw,
@@ -297,7 +297,7 @@ view: tickets {
     sql: ${TABLE}.`metric_set-updated_at` ;;
   }
 
-  dimension: metric_seturl {
+  dimension: z_seturl {
     type: string
     sql: ${TABLE}.`metric_set-url` ;;
   }
