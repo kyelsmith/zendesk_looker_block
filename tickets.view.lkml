@@ -410,11 +410,11 @@ view: tickets {
   set: detail {
     fields: [
       id,
-      collaborator_ids.count,
-      custom_fields.count,
-      fields.count,
-      follower_ids.count,
-      tags.count
+      subject,
+      created_date,
+      assignee_id,
+      requester_id,
+      organization_id
     ]
   }
 }
