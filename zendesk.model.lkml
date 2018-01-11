@@ -37,6 +37,11 @@ explore: tickets {
     sql_on:  ${tickets.assignee_id} = ${assignees.assignee_id} ;;
     relationship: one_to_many
   }
+  join: groups {
+    type: left_outer
+    sql_on:  ${tickets.group_id} = ${groups.id} ;;
+    relationship: one_to_many
+  }
   join: requesters {
     type: left_outer
     sql_on:  ${tickets.requester_id} = ${requesters.requester_id} ;;

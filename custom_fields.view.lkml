@@ -22,4 +22,9 @@ view: custom_fields {
     type: count
     drill_fields: [id, tickets.id]
   }
+
+  measure: kyel {
+    type: average
+    drill_fields: [id, tickets.id]
+  }
 }
