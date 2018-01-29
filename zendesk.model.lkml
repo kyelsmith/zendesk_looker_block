@@ -47,6 +47,11 @@ explore: tickets {
     sql_on:  ${tickets.requester_id} = ${requesters.requester_id} ;;
     relationship: one_to_many
   }
+  join: ticket_forms {
+    type: left_outer
+    sql_on:  ${tickets.ticket_form_id} = ${ticket_forms.id} ;;
+    relationship: one_to_many
+  }
   join: submitters {
     type: left_outer
     sql_on:  ${tickets.submitter_id} = ${submitters.submitter_id} ;;
