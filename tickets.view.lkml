@@ -269,6 +269,11 @@ view: tickets {
     sql: ${TABLE}.`metric_set-solved_at` ;;
   }
 
+  dimension: solved {
+    type: yesno
+    sql: ${z_setsolved_date} IS NOT NULL ;;
+  }
+
   dimension_group: z_setstatus_updated {
     type: time
     timeframes: [
