@@ -64,7 +64,8 @@ explore: tickets {
   #}
   join: organizations {
     type: left_outer
-    sql_on: ${assignees.assignee_organization_id} = ${organizations.id} OR ${requesters.requester_organization_id} = ${organizations.id} OR ${submitters.submitter_organization_id} = ${organizations.id} ;;
-    relationship: one_to_many
+    #sql_on: ${assignees.assignee_organization_id} = ${organizations.id} OR ${requesters.requester_organization_id} = ${organizations.id} OR ${submitters.submitter_organization_id} = ${organizations.id} ;;
+    sql_on: ${tickets.organization_id} = ${organizations.id} ;;
+    relationship: many_to_one
   }
 }
